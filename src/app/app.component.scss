@@ -1,0 +1,93 @@
+$border-color: grey;
+
+strong {
+    cursor: pointer;
+    user-select: none;
+    background-color: rgb(255, 232, 44);
+    color: black;
+    padding: 0rem 0.1rem 0rem 0.1rem;
+    border: 1px solid rgb(255, 232, 44);
+
+    &:hover {
+        background-color: black;
+        color: white;
+        border: 1px solid grey;
+    }
+}
+
+h1 {
+    place-self: center;
+    margin-bottom: 0rem;
+    color: black;
+    font-family: "CATS Goth", "Roboto Mono", sans-serif;
+    font-size: 4rem;
+}
+
+.apocalypse-font {
+    font-family: "CATS Goth", "Roboto Mono", sans-serif;
+    &.big {
+        font-size: 1.5rem;
+    }
+}
+
+em {
+    font-size: .8rem;
+    color: grey;
+}
+
+.npc-gen-grid {
+    display: grid;
+    place-content: center;
+    grid-gap: 1rem;
+
+    div.sections {
+        border-top: 1px solid $border-color;
+        padding-top: 1rem;
+    }
+
+    div.doom {
+        padding-top: 1rem;
+    }
+
+    .link {
+        place-self: center;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        color: grey;
+        display: grid;
+        place-items: center;
+        grid-gap: 0.5rem;
+        a {
+            color: black;
+            &:hover {
+                color: white;
+            }
+        }
+
+        .copyButton {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.center {
+    display: grid;
+    place-self: center;
+
+    em {
+        place-self: center;
+    }
+
+    &.reroll {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .npc-gen-grid {
+        max-width: 53%;
+        margin: auto;
+    }
+}
