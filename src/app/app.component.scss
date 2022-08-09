@@ -51,8 +51,7 @@ em {
 
     .link {
         place-self: center;
-        position: absolute;
-        bottom: 0;
+
         margin-bottom: 0.5rem;
         font-size: 0.6rem;
         color: grey;
@@ -91,6 +90,8 @@ em {
         margin: auto;
 
         .link {
+            position: absolute;
+            bottom: 0;
             font-size: 0.8rem;
         }
     }
