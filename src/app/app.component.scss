@@ -54,7 +54,7 @@ em {
         position: absolute;
         bottom: 0;
         margin-bottom: 0.5rem;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         color: grey;
         display: grid;
         place-items: center;
@@ -89,5 +89,9 @@ em {
     .npc-gen-grid {
         max-width: 53%;
         margin: auto;
+
+        .link {
+            font-size: 0.8rem;
+        }
     }
 }
