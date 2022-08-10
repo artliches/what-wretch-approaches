@@ -123,34 +123,5 @@ em {
             bottom: 0;
             font-size: 0.8rem;
         }
-
-        .hireling-mechanics {
-            display: grid;
-            grid-template-rows: repeat(2, min-content);
-            grid-template-columns: 1fr;
-
-            .reaction-section {
-                padding-bottom: 0.5rem;
-                place-self: center;
-            }
-
-            .double-columns {
-                padding-top: 0.5rem;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: 1fr;
-
-                .speciality-section {
-                    border-right: 1px solid $border-color;
-                    padding-right: 0.5rem;
-                }
-                .morale-and-values-section {
-                    padding-left: 0.5rem;
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    grid-gap: 1rem;
-                }
-            }
-        }
     }
 }

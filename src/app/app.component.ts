@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { APOCALYPSE, BUILD, CONCERN, ISREALLY, MAIN_PRONOUN, NAMES, SECONDARY_PRONOUN, SKIN_TONE, SPECIALITY, SPECIES, TRADE, TRAIT, WANTS, WHATTHEYVALUE } from '../assets/descrips.constants';
+import { APOCALYPSE, BUILD, CONCERN, FUR, ISREALLY, MAIN_PRONOUN, NAMES, SCALES, SECONDARY_PRONOUN, SKIN_TONE, SPECIALITY, SPECIES, TRADE, TRAIT, WANTS, WHATTHEYVALUE } from '../assets/descrips.constants';
 import { RandomNumberService } from './_services/randomNumber.service';
 
 @Component({
@@ -87,7 +87,7 @@ export class AppComponent implements OnInit {
   copied = false;
   @ViewChild('introduction') introduction: any;
   @ViewChild('mainDescription') mainDescription: any;
-  @ViewChild('extraDescription') extraDescription: any;
+  @ViewChild('hirelingMechanics') hirelingMechanics: any;
 
   ngOnInit(): void {
     this.rollAll();
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
     this.clipBoard =
       this.introduction.nativeElement.innerText +
       this.mainDescription.nativeElement.innerText +
-      this.extraDescription.nativeElement.innerText;
+      this.hirelingMechanics.nativeElement.innerText;
 
       navigator.clipboard.writeText(this.clipBoard);
       this.copied = true;
@@ -107,7 +107,6 @@ export class AppComponent implements OnInit {
     this.reRollName();
     this.reRollPronouns();
     this.reRollSpecies();
-    this.reRollSkin();
     this.reRollBuild();
     this.reRollTrait();
     this.reRollTrade();
@@ -202,6 +201,7 @@ export class AppComponent implements OnInit {
 
   reRollSpecies() {
     this.speciesObj.descrip = this.getDescripFromArray(SPECIES, this.speciesObj);
+    this.reRollSkin();
   }
 
   reRollBuild() {
@@ -209,7 +209,13 @@ export class AppComponent implements OnInit {
   }
 
   reRollSkin() {
-    this.skinObj.descrip = this.getDescripFromArray(SKIN_TONE, this.skinObj);
+    if (this.speciesObj.descrip === 'Basalisk-born') {
+      this.skinObj.descrip = this.getDescripFromArray(SCALES, this.skinObj);
+    } else if (this.speciesObj.descrip === 'Gnoll' || this.speciesObj.descrip === 'Bisontaur') {
+      this.skinObj.descrip = this.getDescripFromArray(FUR, this.skinObj);
+    } else {
+      this.skinObj.descrip = this.getDescripFromArray(SKIN_TONE, this.skinObj);
+    }
   }
 
   reRollTrait() {

@@ -8,18 +8,23 @@
     <em><span class="rotate-arrow">&#8626;</span>click to re-roll</em>
   </span>
   
-  <div class="sections"  #introduction>
+  <div class="sections" #introduction>
     From out of the gloom, <strong (click)="reRollName()">{{nameObj.descrip}}</strong> (<strong (click)="reRollMainPronoun()">{{pronounsObj.pronouns_main}}</strong>/<strong (click)="reRollSecondaryPronoun()">{{pronounsObj.pronouns_secondary}}</strong>) approaches.
   </div>
   
   <div class="sections" #mainDescription>
-    <span>{{pronounsObj.pronouns_main}} {{pronounsObj.pronouns_main === 'They' ? 'are' : 'is'}} {{pronounsObj.pronouns_main === 'They' ? 'appear' : 'appears'}} to be <strong (click)="reRollTrait()">{{traitObj.descrip}}</strong> <strong (click)="reRollSpecies()"> {{speciesObj.descrip}}</strong> with
+    <span>
+      {{pronounsObj.pronouns_main}} {{pronounsObj.pronouns_main === 'They' ? 'are' : 'is'}} {{pronounsObj.pronouns_main === 'They' ? 'appear' : 'appears'}} to be <strong (click)="reRollTrait()">{{traitObj.descrip}}</strong> <strong (click)="reRollSpecies()"> {{speciesObj.descrip}}</strong> with
       <span *ngIf="speciesObj.descrip === 'Pale One'; else getSkin">
-        pale
+        pale skin and a 
       </span>
       <ng-template #getSkin>
-        <strong (click)="reRollSkin()">{{skinObj.descrip}}</strong>
-      </ng-template> skin and a <strong (click)="reRollBuild()">{{buildObj.descrip}}</strong> build. {{pronounsObj.pronouns_main}} {{pronounsObj.pronouns_main === 'They' ? 'are' : 'is'}} a <strong (click)="reRollTrade()">{{tradeObj.descrip}}</strong> by trade. {{pronounsObj.pronouns_main === 'They' ? 'Their' : pronounsObj.pronouns_main === 'He' ? 'His' : 'Her'}}  <strong (click)="reRollConcern()"> {{concernObj.descrip}}</strong> is {{pronounsObj.pronouns_main === 'They' ? 'their' : pronounsObj.pronouns_main === 'He' ? 'his' : 'her'}} main concern and weighs heavily upon {{pronounsObj.pronouns_main === 'They' ? 'them' : pronounsObj.pronouns_main === 'He' ? 'him' : 'her'}}. More than anything, {{pronounsObj.pronouns_main | lowercase}} {{pronounsObj.pronouns_main === 'They' ? 'want' : 'wants'}} <strong (click)="reRollWants()"> {{wantsObj.descrip}}</strong>.</span>
+        <span *ngIf="speciesObj.descrip !== 'Skeleton'">
+          <strong (click)="reRollSkin()">{{skinObj.descrip}}</strong> {{speciesObj.descrip === 'Basalisk-born' ? 'scales' : speciesObj.descrip === 'Gnoll' || speciesObj.descrip === 'Bisontaur' ? 'fur' : 'skin'}} and a 
+        </span>
+      </ng-template> 
+      <strong (click)="reRollBuild()">{{buildObj.descrip}}</strong> build. {{pronounsObj.pronouns_main}} {{pronounsObj.pronouns_main === 'They' ? 'are' : 'is'}} a <strong (click)="reRollTrade()">{{tradeObj.descrip}}</strong> by trade. {{pronounsObj.pronouns_main === 'They' ? 'Their' : pronounsObj.pronouns_main === 'He' ? 'His' : 'Her'}}  <strong (click)="reRollConcern()"> {{concernObj.descrip}}</strong> is {{pronounsObj.pronouns_main === 'They' ? 'their' : pronounsObj.pronouns_main === 'He' ? 'his' : 'her'}} main concern and weighs heavily upon {{pronounsObj.pronouns_main === 'They' ? 'them' : pronounsObj.pronouns_main === 'He' ? 'him' : 'her'}}. More than anything, {{pronounsObj.pronouns_main | lowercase}} {{pronounsObj.pronouns_main === 'They' ? 'want' : 'wants'}} <strong (click)="reRollWants()"> {{wantsObj.descrip}}</strong>.
+    </span>
     <div class="inner-section">
       The <span class="apocalypse-font big">A P O C A L Y P S E ? </span> <strong (click)="reRollApocalypse()"> {{apocObj.descrip}}</strong>
     </div>
@@ -50,7 +55,7 @@
 
   <span class="link">
     <strong class="copyButton" (click)="copyToClipboard()">{{copied ? 'COPIED!' : 'COPY TO CLIPBOARD?'}}</strong>
-    <span>WHAT WRETCH APPROACHES?v0.4 is an independent production by <strong><a href='https://twitter.com/codeLiches' target="_blank">@codeLiches</a></strong> and is not affiliated with Ockult Örtmästare Games or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.</span>
+    <span>WHAT WRETCH APPROACHES?v0.5 is an independent production by <strong><a href='https://twitter.com/codeLiches' target="_blank">@codeLiches</a></strong> and is not affiliated with Ockult Örtmästare Games or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.</span>
     <span>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell. </span>
 </span>
 </span>
