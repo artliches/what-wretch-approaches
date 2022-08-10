@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { APOCALYPSE, BUILD, CONCERN, ISREALLY, MAIN_PRONOUN, NAMES, SECONDARY_PRONOUN, SKIN_TONE, SPECIES, TRADE, TRAIT, WANTS } from '../assets/descrips.constants';
+import { APOCALYPSE, BUILD, CONCERN, ISREALLY, MAIN_PRONOUN, NAMES, SECONDARY_PRONOUN, SKIN_TONE, SPECIALITY, SPECIES, TRADE, TRAIT, WANTS, WHATTHEYVALUE } from '../assets/descrips.constants';
 import { RandomNumberService } from './_services/randomNumber.service';
 
 @Component({
@@ -62,6 +62,16 @@ export class AppComponent implements OnInit {
     prevRoll: -1,
   };
 
+  whatTheyWantObj = {
+    descrip: '',
+    prevRoll: -1,
+  };
+
+  specialityObj = {
+    descrip: '',
+    prevRoll: -1,
+  };
+
   pronounsObj = {
     pronouns_main: '',
     pronouns_secondary: '',
@@ -69,7 +79,12 @@ export class AppComponent implements OnInit {
     prevSecondary: -1,
   };
 
+  morale = 0;
+
+  reaction = '';
+
   clipBoard = '';
+  copied = false;
   @ViewChild('introduction') introduction: any;
   @ViewChild('mainDescription') mainDescription: any;
   @ViewChild('extraDescription') extraDescription: any;
@@ -85,6 +100,7 @@ export class AppComponent implements OnInit {
       this.extraDescription.nativeElement.innerText;
 
       navigator.clipboard.writeText(this.clipBoard);
+      this.copied = true;
 }
 
   rollAll() {
@@ -99,6 +115,48 @@ export class AppComponent implements OnInit {
     this.reRollWants();
     this.reRollApocalypse();
     this.reRollIsReally();
+    this.reRollSpeciality();
+    this.reRollWhatTheyValue();
+    this.checkReaction();
+    this.reRollMorale();
+  }
+
+  rollTwodSix(): number {
+    let sum = 0;
+
+    for (let i = 0; i < 2; i++) {
+      sum += this.randomNumber.getRandomNumber(1, 6);
+    }
+
+    return sum;
+  }
+
+  reRollMorale() {
+    this.morale = this.rollTwodSix();
+  }
+
+  checkReaction() {
+    const reactionValue = this.rollTwodSix();
+
+    if (reactionValue <= 3) {
+      this.reaction = ' want to KILL you!'
+    } else if (reactionValue > 3 && reactionValue <= 6) {
+      this.reaction = ' feel angry just looking at you.';
+    } else if (reactionValue > 6 && reactionValue <= 8) {
+      this.reaction = ' feel indifferent about you.';
+    } else if (reactionValue > 8 && reactionValue <= 10) {
+      this.reaction = ' look to be almost friendly.';
+    } else {
+      this.reaction = ' want to help you.';
+    }
+  }
+
+  reRollSpeciality() {
+    this.specialityObj.descrip = this.getDescripFromArray(SPECIALITY, this.specialityObj);
+  }
+
+  reRollWhatTheyValue() {
+    this.whatTheyWantObj.descrip = this.getDescripFromArray(WHATTHEYVALUE, this.whatTheyWantObj);
   }
 
   reRollName() {
@@ -143,39 +201,39 @@ export class AppComponent implements OnInit {
   }
 
   reRollSpecies() {
-    this.speciesObj.descrip = this.getDescripFromArray(SPECIES, this.nameObj);
+    this.speciesObj.descrip = this.getDescripFromArray(SPECIES, this.speciesObj);
   }
 
   reRollBuild() {
-    this.buildObj.descrip = this.getDescripFromArray(BUILD, this.nameObj);
+    this.buildObj.descrip = this.getDescripFromArray(BUILD, this.buildObj);
   }
 
   reRollSkin() {
-    this.skinObj.descrip = this.getDescripFromArray(SKIN_TONE, this.nameObj);
+    this.skinObj.descrip = this.getDescripFromArray(SKIN_TONE, this.skinObj);
   }
 
   reRollTrait() {
-    this.traitObj.descrip = this.getDescripFromArray(TRAIT, this.nameObj);
+    this.traitObj.descrip = this.getDescripFromArray(TRAIT, this.traitObj);
   }
 
   reRollTrade() {
-    this.tradeObj.descrip = this.getDescripFromArray(TRADE, this.nameObj);
+    this.tradeObj.descrip = this.getDescripFromArray(TRADE, this.tradeObj);
   }
 
   reRollConcern() {
-    this.concernObj.descrip = this.getDescripFromArray(CONCERN, this.nameObj);
+    this.concernObj.descrip = this.getDescripFromArray(CONCERN, this.concernObj);
   }
 
   reRollWants() {
-    this.wantsObj.descrip = this.getDescripFromArray(WANTS, this.nameObj);
+    this.wantsObj.descrip = this.getDescripFromArray(WANTS, this.wantsObj);
   }
 
   reRollApocalypse() {
-    this.apocObj.descrip = this.getDescripFromArray(APOCALYPSE, this.nameObj);
+    this.apocObj.descrip = this.getDescripFromArray(APOCALYPSE, this.apocObj);
   }
 
   reRollIsReally() {
-    this.isReallyObj.descrip = this.getDescripFromArray(ISREALLY, this.nameObj);
+    this.isReallyObj.descrip = this.getDescripFromArray(ISREALLY, this.isReallyObj);
   }
 
   getDescripFromArray(specialDescrips: Array<any>, obj: {descrip: string, prevRoll: number}): string {
