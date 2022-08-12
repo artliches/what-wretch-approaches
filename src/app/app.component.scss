@@ -23,10 +23,17 @@ h1 {
     font-size: 4rem;
 }
 
+.morale-font {
+    font-weight: bold;
+}
+
 .apocalypse-font {
     font-family: "CATS Goth", "Roboto Mono", sans-serif;
     &.big {
         font-size: 1.5rem;
+    }
+    &.mork {
+        font-size: 1rem;
     }
 }
 
@@ -43,6 +50,10 @@ em {
     div.sections {
         border-top: 1px solid $border-color;
         padding-top: 1rem;
+
+        &.name-section {
+            text-align: center;
+        }
     }
 
     div.inner-section {

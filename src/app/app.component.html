@@ -1,14 +1,14 @@
 <span class="npc-gen-grid">
   <span class="center">
     <h1>WHAT WRETCH APPROACHES?</h1>
-    <em><span class="rotate-arrow">&#8626;</span>randomized NPCS for <span class="apocalypse-font">MÖRK BORG</span></em>
+    <em><span class="rotate-arrow">&#8626;</span>randomized NPCS for <span class="apocalypse-font mork">MÖRK BORG</span></em>
   </span>
   <span class="center">
     <strong class="center reroll" (click)="rollAll()">SOMEONE NEW APPROACHES</strong>
     <em><span class="rotate-arrow">&#8626;</span>click to re-roll</em>
   </span>
   
-  <div class="sections" #introduction>
+  <div class="sections name-section" #introduction>
     From out of the gloom, <strong (click)="reRollName()">{{nameObj.descrip}}</strong> (<strong (click)="reRollMainPronoun()">{{pronounsObj.pronouns_main}}</strong>/<strong (click)="reRollSecondaryPronoun()">{{pronounsObj.pronouns_secondary}}</strong>) approaches.
   </div>
   
@@ -47,7 +47,7 @@
       <span class="morale-and-values-section">
         <span>If you want to keep {{nameObj.descrip}} around, you must provide {{pronounsObj.pronouns_main === 'They' ? 'them' : pronounsObj.pronouns_main === 'He' ? 'him' : 'her'}} with <strong (click)="reRollWhatTheyValue()">{{whatTheyWantObj.descrip}}</strong>.</span>
         <span>
-          MORALE <strong (click)="reRollMorale()">{{morale}}</strong>
+          <span class="morale-font">MORALE </span> <strong (click)="reRollMorale()">{{morale}}</strong>
         </span>
       </span>
     </span>
@@ -55,7 +55,7 @@
 
   <span class="link">
     <strong class="copyButton" (click)="copyToClipboard()">{{copied ? 'COPIED!' : 'COPY TO CLIPBOARD?'}}</strong>
-    <span>WHAT WRETCH APPROACHES?v0.5 is an independent production by <strong><a href='https://twitter.com/codeLiches' target="_blank">@codeLiches</a></strong> and is not affiliated with Ockult Örtmästare Games or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.</span>
+    <span>WHAT WRETCH APPROACHES?v1.0 is an independent production by <strong><a href='https://twitter.com/codeLiches' target="_blank">@codeLiches</a></strong> and is not affiliated with Ockult Örtmästare Games or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.</span>
     <span>MÖRK BORG is copyright Ockult Örtmästare Games and Stockholm Kartell. </span>
 </span>
 </span>
