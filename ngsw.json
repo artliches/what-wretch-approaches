@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1660570445647,
+  "index": "/what-wretch-approaches/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/what-wretch-approaches/favicon.ico",
+        "/what-wretch-approaches/index.html",
+        "/what-wretch-approaches/main.ecef136c8c52074c.js",
+        "/what-wretch-approaches/manifest.webmanifest",
+        "/what-wretch-approaches/polyfills.6af3ec35b7916542.js",
+        "/what-wretch-approaches/runtime.fe670c8a647f81bb.js",
+        "/what-wretch-approaches/styles.325679059afc078c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/what-wretch-approaches/CATSchmalfetteThannhaeuser.1cbcfce3590eab0a.ttf",
+        "/what-wretch-approaches/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf",
+        "/what-wretch-approaches/assets/descrips.constants.ts",
+        "/what-wretch-approaches/assets/fonts/CATSchmalfetteThannhaeuser.ttf",
+        "/what-wretch-approaches/assets/fonts/RobotoMono-VariableFont_wght.ttf",
+        "/what-wretch-approaches/assets/icons/android-chrome-192x192.png",
+        "/what-wretch-approaches/assets/icons/android-chrome-512x512.png",
+        "/what-wretch-approaches/assets/icons/apple-touch-icon.png",
+        "/what-wretch-approaches/assets/icons/favicon-16x16.png",
+        "/what-wretch-approaches/assets/icons/favicon-32x32.png",
+        "/what-wretch-approaches/assets/icons/favicon.ico"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/what-wretch-approaches/CATSchmalfetteThannhaeuser.1cbcfce3590eab0a.ttf": "86b01de1a3bf84b98da42bbcad7a5b303cfc0f16",
+    "/what-wretch-approaches/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
+    "/what-wretch-approaches/assets/descrips.constants.ts": "dff38dea7e9cbf9309677752cd3549efa99f2f67",
+    "/what-wretch-approaches/assets/fonts/CATSchmalfetteThannhaeuser.ttf": "86b01de1a3bf84b98da42bbcad7a5b303cfc0f16",
+    "/what-wretch-approaches/assets/fonts/RobotoMono-VariableFont_wght.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
+    "/what-wretch-approaches/assets/icons/android-chrome-192x192.png": "921655565463cac862e81312cbc9861ed9d96973",
+    "/what-wretch-approaches/assets/icons/android-chrome-512x512.png": "be7d877bbb9eafb8bc3493df562b64ca646bc9cf",
+    "/what-wretch-approaches/assets/icons/apple-touch-icon.png": "c7a33bac1f104ecd1c47bb18d2169d206ea537e6",
+    "/what-wretch-approaches/assets/icons/favicon-16x16.png": "41149ab675430514b667b788f549dbd9f6c23d84",
+    "/what-wretch-approaches/assets/icons/favicon-32x32.png": "e0c905cfb84f324f3f53fa105ad7b53b549a2678",
+    "/what-wretch-approaches/assets/icons/favicon.ico": "235ed27da892ee49d3a8f59d4480f706712e8325",
+    "/what-wretch-approaches/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/what-wretch-approaches/index.html": "aaba2388aa2018481e4c1dc217586b8c935760f9",
+    "/what-wretch-approaches/main.ecef136c8c52074c.js": "8853227f7895442ad320a6c6e89c1ba07f01bcb5",
+    "/what-wretch-approaches/manifest.webmanifest": "386b610e958adf87e55bb3cd9a95ac71df138028",
+    "/what-wretch-approaches/polyfills.6af3ec35b7916542.js": "443770c1f13c1e276198c2e6c7229b43bbc462a6",
+    "/what-wretch-approaches/runtime.fe670c8a647f81bb.js": "e1b22cd081606bc2ef77bf719f6d3f2fc7575492",
+    "/what-wretch-approaches/styles.325679059afc078c.css": "c23c4670dbc0823bcb9b7276eabb166d4f99b68a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
