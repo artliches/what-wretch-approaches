@@ -369,7 +369,7 @@ export const SECONDARY_PRONOUN = [
 export const SKIN_TONE = [
     'ashen',
     'leathery tanned',
-    'onxy',
+    'onyx',
     'ruddy',
     'clay',
     'driftwood'
