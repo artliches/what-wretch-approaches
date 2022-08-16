@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1660662713652,
+  "timestamp": 1660671508871,
   "index": "/what-wretch-approaches/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/what-wretch-approaches/favicon.ico",
         "/what-wretch-approaches/index.html",
-        "/what-wretch-approaches/main.f429d962a3a74791.js",
+        "/what-wretch-approaches/main.21900fdd3fd428eb.js",
         "/what-wretch-approaches/manifest.webmanifest",
         "/what-wretch-approaches/polyfills.6af3ec35b7916542.js",
         "/what-wretch-approaches/runtime.fe670c8a647f81bb.js",
@@ -58,8 +58,8 @@
     "/what-wretch-approaches/assets/icons/favicon-32x32.png": "e0c905cfb84f324f3f53fa105ad7b53b549a2678",
     "/what-wretch-approaches/assets/icons/favicon.ico": "235ed27da892ee49d3a8f59d4480f706712e8325",
     "/what-wretch-approaches/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/what-wretch-approaches/index.html": "33cc380d1b00be82d8c40fbb4b3399fd18998a49",
-    "/what-wretch-approaches/main.f429d962a3a74791.js": "ad59ab0627f6759e9471e27e503615457fa26b10",
+    "/what-wretch-approaches/index.html": "020a78c1fa0a38e04f5cac30ce25a06e369e7142",
+    "/what-wretch-approaches/main.21900fdd3fd428eb.js": "68f575b902cb3997dbb2c5ee814edb00cd963480",
     "/what-wretch-approaches/manifest.webmanifest": "386b610e958adf87e55bb3cd9a95ac71df138028",
     "/what-wretch-approaches/polyfills.6af3ec35b7916542.js": "443770c1f13c1e276198c2e6c7229b43bbc462a6",
     "/what-wretch-approaches/runtime.fe670c8a647f81bb.js": "e1b22cd081606bc2ef77bf719f6d3f2fc7575492",
