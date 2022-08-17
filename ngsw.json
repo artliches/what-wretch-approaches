@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1660671946769,
+  "timestamp": 1660748562002,
   "index": "/what-wretch-approaches/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/what-wretch-approaches/favicon.ico",
         "/what-wretch-approaches/index.html",
-        "/what-wretch-approaches/main.1374ec5cb8c2e91d.js",
+        "/what-wretch-approaches/main.b285c25473ae4ab2.js",
         "/what-wretch-approaches/manifest.webmanifest",
         "/what-wretch-approaches/polyfills.6af3ec35b7916542.js",
         "/what-wretch-approaches/runtime.fe670c8a647f81bb.js",
@@ -48,7 +48,7 @@
   "hashTable": {
     "/what-wretch-approaches/CATSchmalfetteThannhaeuser.1cbcfce3590eab0a.ttf": "86b01de1a3bf84b98da42bbcad7a5b303cfc0f16",
     "/what-wretch-approaches/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
-    "/what-wretch-approaches/assets/descrips.constants.ts": "29fceb550c77b3ce0274807815e077c2afa5195b",
+    "/what-wretch-approaches/assets/descrips.constants.ts": "a4b443d2893bf6206679c1fadd1cca4f330954a6",
     "/what-wretch-approaches/assets/fonts/CATSchmalfetteThannhaeuser.ttf": "86b01de1a3bf84b98da42bbcad7a5b303cfc0f16",
     "/what-wretch-approaches/assets/fonts/RobotoMono-VariableFont_wght.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
     "/what-wretch-approaches/assets/icons/android-chrome-192x192.png": "921655565463cac862e81312cbc9861ed9d96973",
@@ -58,8 +58,8 @@
     "/what-wretch-approaches/assets/icons/favicon-32x32.png": "e0c905cfb84f324f3f53fa105ad7b53b549a2678",
     "/what-wretch-approaches/assets/icons/favicon.ico": "235ed27da892ee49d3a8f59d4480f706712e8325",
     "/what-wretch-approaches/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/what-wretch-approaches/index.html": "c29e2f74ca9d474ab90d6db23f5726f71d020c40",
-    "/what-wretch-approaches/main.1374ec5cb8c2e91d.js": "203e387e7a3b566de6024f2a1f393c70405022dc",
+    "/what-wretch-approaches/index.html": "f1a701583ab6310dedcb79a2bc6118a351bbda32",
+    "/what-wretch-approaches/main.b285c25473ae4ab2.js": "3b67de510965561ec7330acb557bc3dd8ff59a7c",
     "/what-wretch-approaches/manifest.webmanifest": "386b610e958adf87e55bb3cd9a95ac71df138028",
     "/what-wretch-approaches/polyfills.6af3ec35b7916542.js": "443770c1f13c1e276198c2e6c7229b43bbc462a6",
     "/what-wretch-approaches/runtime.fe670c8a647f81bb.js": "e1b22cd081606bc2ef77bf719f6d3f2fc7575492",
