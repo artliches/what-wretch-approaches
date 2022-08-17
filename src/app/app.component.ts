@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { APOCALYPSE, BUILD, CONCERN, FUR, ISREALLY, MAIN_PRONOUN, NAMES, SCALES, SECONDARY_PRONOUN, SKIN_TONE, SPECIALITY, SPECIES, TRADE, TRAIT, WANTS, WHATTHEYVALUE } from '../assets/descrips.constants';
+import { APOCALYPSE, BUILD, CONCERN, FUR, ISREALLY, MAIN_PRONOUN, NAMES, PALE_NAMES_1, PALE_NAMES_2, PALE_NAMES_3, SCALES, SECONDARY_PRONOUN, SKIN_TONE, SPECIALITY, SPECIES, TRADE, TRAIT, WANTS, WHATTHEYVALUE } from '../assets/descrips.constants';
 import { RandomNumberService } from './_services/randomNumber.service';
 
 @Component({
@@ -15,6 +15,11 @@ export class AppComponent implements OnInit {
   nameObj = {
     descrip: '',
     prevRoll: -1,
+    paleNamesPrev: {
+      first: -1,
+      second: -1,
+      third: -1,
+    }
   };
 
   traitObj = {
@@ -159,7 +164,29 @@ export class AppComponent implements OnInit {
   }
 
   reRollName() {
-    this.nameObj.descrip = this.getDescripFromArray(NAMES, this.nameObj);
+    if (this.speciesObj.descrip === 'Pale One') {
+      const arrayLengths = {
+        first: PALE_NAMES_1.length - 1,
+        second: PALE_NAMES_2.length - 1,
+        third: PALE_NAMES_3.length - 1
+      };
+
+      const rolledValues = {
+        first: this.randomNumber.getRandomNumber(0, arrayLengths.first, this.nameObj.paleNamesPrev.first),
+        second: this.randomNumber.getRandomNumber(0, arrayLengths.second, this.nameObj.paleNamesPrev.second),
+        third: this.randomNumber.getRandomNumber(0, arrayLengths.third, this.nameObj.paleNamesPrev.third),
+      };
+
+      this.nameObj.paleNamesPrev.first = rolledValues.first;
+      this.nameObj.paleNamesPrev.second = rolledValues.second;
+      this.nameObj.paleNamesPrev.third = rolledValues.third;
+
+      this.nameObj.descrip = `${PALE_NAMES_1[rolledValues.first]} ${PALE_NAMES_2[rolledValues.second]} ${PALE_NAMES_3[rolledValues.third]}`;
+
+    } else {
+      this.nameObj.descrip = this.getDescripFromArray(NAMES, this.nameObj);
+    }
+
   }
 
   reRollPronouns() {
@@ -200,7 +227,11 @@ export class AppComponent implements OnInit {
   }
 
   reRollSpecies() {
+    const previousSpecies = this.speciesObj.descrip;
     this.speciesObj.descrip = this.getDescripFromArray(SPECIES, this.speciesObj);
+    if (this.speciesObj.descrip === 'Pale One' || previousSpecies === 'Pale One') {
+      this.reRollName();
+    }
     this.reRollSkin();
   }
 
